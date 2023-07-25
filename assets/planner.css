@@ -1,0 +1,13 @@
+body {
+  background-color: #dfdfdf;
+}
+.container {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
