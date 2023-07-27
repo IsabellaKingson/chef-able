@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AboutU</title>
-    <link rel="stylesheet" href="./assets/about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/about.css" />
 </head>
 <body>
     <!-- Nav (we need to change it to our links) -->
-  <nav>
+  <!-- <nav>
     <div class="nav-wrapper">
      <a><img src="./assets/Logo/Artboard 3.png" class="brand-logo"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -19,18 +20,19 @@
         <li><a href="collapsible.html" class="navLink">AboutU</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+  
 <!-- About Forum -->
 <section class= "AboutBox">
       <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="First Name" id="first_name" type="text" class="validate">
+          <input placeholder="First Name" id="firstName" type="text" class="validate">
           <label for="first_name"></label>
         </div>
         <div class="input-field col s6">
-            <input placeholder="Last Name" id="last_name" type="text" class="validate">
+            <input placeholder="Last Name" id="lastName" type="text" class="validate">
             <label for="last_name"></label>
         </div>
         <div class="input-field col s6">
@@ -39,24 +41,20 @@
         </div>
         <!-- Dropdown options for Gender -->
         <div class = "genderBox">
-        <div class="input-field col s12"> 
-<div id ="selectGender">
-            <label >Select your Gender</label>
-            <select multiple>
-              <option value="" selected>Choose an option</option>
+            <select class="browser-default">
+              <option value="" selected> Please select your gender</option>
               <option value="1">Female</option>
               <option value="2">Male</option>
               <option value="3">Transgender</option>
-              <option value="3">Non-binary</option>
-              <option value="3">Prefer not to respond</option>
+              <option value="4">Non-binary</option>
+              <option value="4">Prefer not to respond</option>
             </select>
-        </div>
         </div>
         </div>
     </div>
       </div>
       <br>
-      <h3> Please check off your allegries listed down below:</h3>
+      <h5> Please check off your allegries listed down below:</h5>
       <div class="checkboxContainer">
         <div class = "checkBox">
             
@@ -201,9 +199,11 @@
               </p>
         </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
+      <button class="btn" type="submit" name="action">Submit
+        <i class="material-icons right"></i>
       </button>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/js/about.js"></script>
 </body>
 </html>

@@ -39,8 +39,8 @@ a {
   align-content: center;
   justify-content: center;
 }
-#first_name,
-#last_name,
+#firstName,
+#lastName,
 #age {
   width: 100%;
 }
