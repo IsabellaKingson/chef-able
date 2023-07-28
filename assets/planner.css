@@ -1,0 +1,23 @@
+:root {
+    --pinkie-melon: #d88b84;
+    --greenie-melon: #cbdd73;
+    --whiteness-melon: #ffffff;
+    --blackness-melon: #231520;
+}
+body {
+  background-color: var(--greenie-melon);
+  font-family: 'Coustard', serif;
+}
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.btn-small {
+    background-color: var(--pinkie-melon);
+}
