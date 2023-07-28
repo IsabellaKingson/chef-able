@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="./assets/planner.css" />
+    <link rel="stylesheet" href="./assets/planner-assets/planner.css" />
     <title>Meal Planner</title>
   </head>
   <body>
@@ -22,201 +22,197 @@
       <h1 class="center-align">Weekly Meal Plan</h1>
       <div class="container row">
         <div class="card">
-          <div class="card-content">
+          <form class="card-content" id="breakfast">
             <h4 class="center-align">Breakfast</h4>
-            <div class="section">
+            <div class="section" id="b-mon">
               <h6>Monday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
             <div class="divider"></div>
-            <div class="section">
+            <div class="section" id="b-tues">
               <h6>Tuesday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
-          </div>
+            </div>
             <div class="divider"></div>
-            <div class="section">
+            <div class="section" id="b-wed">
               <h6>Wednesday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
             <div class="divider"></div>
-            <div class="section">
+            <div class="section" id="b-thurs">
               <h6>Thursday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
             <div class="divider"></div>
-            <div class="section">
+            <div class="section" id="b-fri">
               <h6>Friday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
             <div class="divider"></div>
-            <div class="section">
+            <div class="section" id="b-sat">
               <h6>Saturday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
-            <div class="divider"></div>
+            <div class="divider" id="b-sun"></div>
             <div class="section">
               <h6>Sunday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light">
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
                 <i class="material-icons">add</i>
               </a>
             </div>
             <div class="divider"></div>
-            <div class="buttons container row">
+            <div class="container row">
               <button
-                class="btn-small waves-effect waves-light"
-                type="submit"
-                name="action"
+                class="btn-small waves-effect waves-light clear-btn"
+                type="reset"
+                name="clear-b"
               >
                 Clear
               </button>
             </div>
-          </div>
+          </form>
         </div>
 
         <div class="card">
-            <div class="card-content">
-                <h4 class="center-align">Lunch</h4>
-                <div class="section">
-                  <h6>Monday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                  <h6>Tuesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+         <form class="card-content" id="lunch">
+           <h4 class="center-align">Lunch</h4>
+              <div class="section" id="l-mon">
+                 <h6>Monday</h6>
+                <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="l-tues">
+                <h6>Tuesday</h6>
+                <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                  <i class="material-icons">add</i>
+                </a>
+            </div>
+              <div class="divider"></div>
+              <div class="section" id="l-wed">
+                  <h6>Wednesday</h6>
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
               </div>
                 <div class="divider"></div>
-                <div class="section">
-                  <h6>Wednesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="l-thurs">
                   <h6>Thursday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="l-fri">
                   <h6>Friday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="l-sat">
                   <h6>Saturday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+            <div class="section" id="l-sun">
                   <h6>Sunday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
-                </div>
-                <div class="divider"></div>
-                <div class="buttons container row">
+            </div>
+            <div class="divider"></div>
+            <div class="container row">
                   <button
-                    class="btn-small waves-effect waves-light"
-                    type="submit"
-                    name="action"
+                    class="btn-small waves-effect waves-light clear-btn"
+                    type="reset"
+                    name="clear-l"
                   >
                     Clear
                   </button>
-                </div>
-              </div>
+            </div>
+          </form>
         </div>
         <div class="card">
-            <div class="card-content">
+            <form class="card-content" id="dinner">
                 <h4 class="center-align">Dinner</h4>
-                <div class="section">
+                <div class="section" id="d-mon">
                   <h6>Monday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light dropdown-trigger" href="#" data-target="dropdown">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-tues">
                   <h6>Tuesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
               </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-wed">
                   <h6>Wednesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-thurs">
                   <h6>Thursday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-fri">
                   <h6>Friday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-sat">
                   <h6>Saturday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section">
+                <div class="section" id="d-sun">
                   <h6>Sunday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light">
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
                     <i class="material-icons">add</i>
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="buttons container row">
+                <div class="container row">
                   <button
-                    class="btn-small waves-effect waves-light"
-                    type="submit"
-                    name="action"
+                    class="btn-small waves-effect waves-light clear-btn"
+                    type="reset"
+                    name="clear-d"
                   >
                     Clear
                   </button>
                 </div>
-              </div>
+        </form>
       </div>
     </main>
-    <ul id='dropdown' class='dropdown-content'>
-      <li><a href="#!">My Recipes</a></li>
-      <li><a href="#!">Favorite Recipes</a></li>
-      <li><a href="#!">Write in:<input type="text"></a></li>
-    </ul> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/planner-assets/planner.js"></script>
   </body>
 </html>
