@@ -24,6 +24,7 @@
 
 <!-- About Forum -->
 <section class= "AboutBox">
+    <h1> About U</h1>
       <div class="row">
     <form class="col s12">
       <div class="row">
@@ -47,12 +48,20 @@
               <option value="2">Male</option>
               <option value="3">Transgender</option>
               <option value="4">Non-binary</option>
-              <option value="4">Prefer not to respond</option>
+              <option value="5">Prefer not to respond</option>
             </select>
         </div>
         </div>
     </div>
       </div>
+      <!-- Dropdown for Country -->
+      <div class = "countryBox">
+        <select class="browser-default">
+          <option value=""  selected> Please select your country</option>
+          <option value="1" id = "country"></option>
+         
+        </select>
+    </div>
       <br>
       <h5> Please un-check off your allegries listed down below:</h5>
       <div class="checkboxContainer">
@@ -60,139 +69,139 @@
             
             <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Peanuts</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Sesame</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Shellfish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Tree Nuts</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Fish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Milk</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Soy</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Egg</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Grains</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Citrus</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Berries</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Mushrooms</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Bell Pepper</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Cheese</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Beef</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Fish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Peaches</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span> Watermelon</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Green Bean</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Orange</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Chicken</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in"  />
                   <span>Apple</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" />
                   <span>Others <input value=" " id="other" type="text" class="validate">
                   </span>
                 </label>
@@ -202,6 +211,18 @@
       <button class="btn" type="submit" name="action">Submit
         <i class="material-icons right"></i>
       </button>
+      <div class = "response">
+        <h5> Record of U</h5>
+       <p> First name: <span id="first"></span> </p>
+       <p> Last name: <span id="last"></span> </p>
+       <p> Age: <span id="ageNum"></span> </p>
+       <p> Gender: <span id="gen"></span> </p>
+       <p> Allgeries: <span id="allg"></span> </p>
+       <p> Other Allgeries: <span id="OtherAllg"></span> </p>
+
+
+
+     </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/about.js"></script>
