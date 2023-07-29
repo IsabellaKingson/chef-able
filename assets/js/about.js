@@ -7,7 +7,6 @@ const respondel = document.getElementById("#response");
 // get input data
 function saveInputData() {
     const firstNameEl = document.getElementById("#firstName").value.trim();
-    const lastNameEl = document.getElementById("#lastName").value.trim();
     const ageEl = document.getElementById("#age").value.trim();
     const genderEl = document.getElementById(".browser-default");
     const optionsEl = document.getElementById(".filled-in").value;
@@ -19,12 +18,10 @@ function saveInputData() {
         var inputData = JSON.parse(localStorage.getItem("saveInputData"));
         if (inputData !== null) {
             document.getElementById("first").innerHTML = inputData.firstNameEl;
-            document.getElementById("last").innerHTML = inputData.lastNameEl;
             document.getElementById("ageNum").innerHTML = inputData.ageEl;
             document.getElementById("gen").innerHTML = inputData.genderEl;
             document.getElementById("allg").innerHTML = inputData.optionsEl;
             document.getElementById("OtherAllg").innerHTML = inputData.optionsEl;
-
         }
     }
 }
