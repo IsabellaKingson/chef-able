@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <!--Google font Coustard-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coustard&display=swap"
+      rel="stylesheet"
+    />
+    <!--Materialize Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!---Actual Materialize CSS links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--CSS link-->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="page2">
+    <section class="main-navbar">
+      <nav class="nav-fixed">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Shopping List</a>
+          <a class="waves-effect waves-light btn-small" href="index.html">HOME PAGE</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i></a
+          >
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" onclick="toggleModal();">Home</a></li>
+            <li><a href="#" onclick="toggleModal();">Food</a></li>
+            <li><a href="#" onclick="toggleModal();">Allergies</a></li>
+            <li><a href="#" onclick="toggleModal();">About US</a></li>
+            <li><a href="#" onclick="toggleModal();">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#" onclick="toggleModal();">Home</a></li>
+        <li><a href="#" onclick="toggleModal();">Food</a></li>
+        <li><a href="#" onclick="toggleModal();">Allergies</a></li>
+        <li><a href="#" onclick="toggleModal();">About US</a></li>
+        <li><a href="#" onclick="toggleModal();">Contact</a></li>
+      </ul>
+    </section>
+    <section>
+        <div class="section white center">
+            <div class="row container center">
+                <div class="col l6 m6 s12">
+                    <div style="width: 400px"> 
+                        DISPLAY YOUR SHOPPING BASKET
+                        <div class="row">
+                            <div class="col s4" id="food-item">FOOD/ITEM</div>
+                            <div class="col s4" id="quantity-item">QUANTITY</div>
+                            <div class="col s4" id="weight-item">WEIGHT</div>
+                        </div>
+                         
+                        <div>
+                            <a class="waves-effect waves-light btn-large" onclick="displayShoppingList()">DISPLAY</a>
+                        </div>                       
+                    </div>                    
+                </div>               
+            </div>
+        </div>
+    </section>
+    <section class="section white center">    
+            <div class="row">              
+                <div class="col s6 offset-s6">
+                    <img class="image"  src="banner3.jpg" alt="Oops!" width="200px" height="300px">
+                </div>
+            </div>       
+    </section>
+    <section class="section">
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+    </section>
+<section class="infoModal">
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <h4 id="info-modal-heading">Link Disabled</h4>
+            <p id="info-modal-content">All links are disabled</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="modal-close.waves-effect.btn-flat">Close</a>
+          </div>
+        </div>
+      </section>
+    </body>
+    <!--Jquery-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--Materialize Javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--custom js-->
+    <script src="loaded2.js"></script>
+  </html>

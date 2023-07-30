@@ -1,4 +1,3 @@
-
 $(document).ready(function()
 {
     $('.modal').modal();
@@ -20,11 +19,28 @@ let shopping_list_weight = [];
 let count_item = 0;
 let count_quantity = 0;
 let count_weight = 0;
+let food_allergies = ["banana", "pork"];
+
+
 
 function shoppingList()
 {
-
     let item_chosen = document.getElementById("item").value;
+    item_chosen = item_chosen.toLowerCase();
+    
+    for(let i = 0; i < food_allergies.length; i++)
+    {
+        if(item_chosen === food_allergies[i])
+        {
+            console.log("TEst");
+            item_chosen = item_chosen + "*";
+
+        }
+        else
+        {
+            console.log("null");
+        }
+    }  
     if( item_chosen === "")
     {
         alert("Please enter a food item");
@@ -83,8 +99,10 @@ function shoppingList()
         let weight_item = document.getElementById("weight");
         weight_item.value = "";
     }
-    localStorage.setItem("Weight", JSON.stringify(shopping_list_weight));
+    localStorage.setItem("Weight", JSON.stringify(shopping_list_weight));   
+
+   
+   
 
 }
-
 
