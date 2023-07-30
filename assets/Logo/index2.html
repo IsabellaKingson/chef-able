@@ -51,41 +51,29 @@
         <li><a href="#" onclick="toggleModal();">Contact</a></li>
       </ul>
     </section>
-    <section>
-        <div class="section white center">
-            <div class="row container center">
-                <div class="col l6 m6 s12">
-                    <div style="width: 400px"> 
-                        DISPLAY YOUR SHOPPING BASKET
-                        <div class="row">
-                            <div class="col s4" id="food-item">FOOD/ITEM</div>
-                            <div class="col s4" id="quantity-item">QUANTITY</div>
-                            <div class="col s4" id="weight-item">WEIGHT</div>
-                        </div>
-                         
-                        <div>
-                            <a class="waves-effect waves-light btn-large" onclick="displayShoppingList()">DISPLAY</a>
-                        </div>                       
-                    </div>                    
-                </div>               
-            </div>
-        </div>
-    </section>
-    <section class="section white center">    
-            <div class="row">              
-                <div class="col s6 offset-s6">
-                    <img class="image"  src="banner3.jpg" alt="Oops!" width="200px" height="300px">
-                </div>
-            </div>       
-    </section>
-    <section class="section">
-        <div class="row">
-            <div class="col l12 m12 s12">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-    </section>
-<section class="infoModal">
+
+   
+<section>
+  <div class="section white center">
+      <div class="row container center">
+          <div class="col l6 m6 s12">
+              <div style="width: 400px"> 
+                  DISPLAY YOUR SHOPPING BASKET
+                  <div class="shopping-display">
+                      <div id="food-item">FOOD/ITEM</div>
+                      <div  id="quantity-item">QUANTITY</div>
+                      <div  id="weight-item">WEIGHT</div>
+                  </div>
+                   
+                  <div>
+                      <a class="waves-effect waves-light btn-large" onclick="displayShoppingList()">DISPLAY</a>
+                  </div>                       
+              </div>                    
+          </div>               
+      </div>
+  </div>
+  </section>
+  <section class="infoModal">
         <div id="modal3" class="modal">
           <div class="modal-content">
             <h4 id="info-modal-heading">Link Disabled</h4>
@@ -109,3 +97,4 @@
     <!--custom js-->
     <script src="loaded2.js"></script>
   </html>
+  

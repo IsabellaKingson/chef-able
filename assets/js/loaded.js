@@ -99,8 +99,7 @@ function shoppingList()
         let weight_item = document.getElementById("weight");
         weight_item.value = "";
     }
-    localStorage.setItem("Weight", JSON.stringify(shopping_list_weight));   
-
+    localStorage.setItem("Weight", JSON.stringify(shopping_list_weight)); 
    
    
 

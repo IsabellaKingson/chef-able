@@ -37,6 +37,26 @@
   top: 80px;
   border-radius: 8px;
 }
+.shopping-display
+{
+  display: flex;
+  border: solid transparent;  
+  width: 500px;
+}
+
+#quantity-item
+{
+  position: absolute;
+  margin-left: 420px;
+}
+#weight-item
+{
+  position: absolute;
+  margin-left: 360px;
+}
+
+
+
 
 
 
