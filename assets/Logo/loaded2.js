@@ -41,35 +41,7 @@ function displayShoppingList()
         
         
     }
-    /*
-    if(click < count)
-    {
-        for(let i = 0; i < foodItemList.length; i++)
-        {
-            console.log(foodItemList[i]);
-            
-            if(foodItemList[i].slice(-1) === "*")
-            {
-                document.getElementById("food-item").innerHTML += "<br>" + foodItemList[i].fontcolor("red") + "<br>";
-                document.getElementById("quantity-item").innerHTML += "<br>" +quantityItemList[i].fontcolor("red") + "<br>";
-                document.getElementById("weight-item").innerHTML += "<br>" + weightList[i].fontcolor("red") + "<br>";
-            }
-            else
-            {
-                document.getElementById("food-item").innerHTML += "<br>" + foodItemList[i].fontcolor("black") + "<br>";
-                document.getElementById("quantity-item").innerHTML += "<br>" +quantityItemList[i].fontcolor("black") + "<br>";
-                document.getElementById("weight-item").innerHTML += "<br>" + weightList[i].fontcolor("black") + "<br>";
-            }
-            click += 1;          
-        }
-        
-
-    }
-    else
-    {
-        return;
-    }*/
-
+  
     
     
   
