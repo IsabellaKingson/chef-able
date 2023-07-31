@@ -7,31 +7,33 @@
 body {
   background-color: white;
 }
-nav {
+nav .nav-wrapper {
+  position: relative;
+  height: 100px;
+  padding-top: 20px;
+}
+.nav-wrapper {
   background-color: white;
 }
-.brand-logo {
-  height: 200px;
-}
-.nav {
+img {
+  position: absolute;
+  left: 10px;
+  top: -120px;
+  margin: 0 0 20px;
+  text-align: center;
   padding-top: 20px;
-  margin-right: 40px;
-  font-size: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  flex-direction: row-reverse;
 }
-.navLink ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-a {
+nav ul a {
   color: black;
-  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  color: #cbdd73;
+  padding-bottom: 20px;
 }
 .AboutBox {
   background-color: #d88b84;
+  width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -63,4 +65,12 @@ a {
   background-color: #cbdd73;
   border: none;
   border-radius: 5px;
+}
+#response {
+  border: 2px;
+  background-color: black;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  top: 0;
+  background-color: #cbdd73;
 }
