@@ -7,31 +7,38 @@
 body {
   background-color: white;
 }
-nav {
+nav .nav-wrapper {
+  position: relative;
+  height: 100px;
+  padding-top: 20px;
+}
+.nav-wrapper {
   background-color: white;
 }
-.brand-logo {
-  height: 200px;
-}
-.nav {
+img {
+  position: absolute;
+  left: 10px;
+  top: -120px;
+  margin: 0 0 20px;
+  text-align: center;
   padding-top: 20px;
-  margin-right: 40px;
-  font-size: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  flex-direction: row-reverse;
 }
-.navLink ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-a {
+nav ul a {
   color: black;
-  text-decoration: none;
+  border-radius: 5px;
+}
+nav ul a:hover {
+  background-color: #d88b84;
+  opacity: 80%;
+}
+h1 {
+  text-align: center;
+  color: #cbdd73;
+  padding-bottom: 20px;
 }
 .AboutBox {
   background-color: #d88b84;
+  width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -39,16 +46,19 @@ a {
   align-content: center;
   justify-content: center;
 }
-#firstName,
-#lastName,
-#age {
-  width: 100%;
+input[type="text"]:not(.browser-default) {
+  border-bottom: 1px solid #cbdd73;
 }
+input {
+  font-family: "Coustard", serif;
+}
+
 .checkboxContainer {
   background-color: white;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 5px;
 }
 .checkBox {
   display: flex;
@@ -63,4 +73,19 @@ a {
   background-color: #cbdd73;
   border: none;
   border-radius: 5px;
+}
+.response {
+  padding: 10px 0 20px 30px;
+  margin-top:50px ;
+  border: 2px;
+  background-color: white;
+  border-radius: 5px;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  top: 0;
+  background-color: #cbdd73;
+}
+#recordU {
+  color:#cbdd73;
+  text-align: left;
 }
