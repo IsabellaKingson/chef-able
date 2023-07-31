@@ -25,6 +25,11 @@ img {
 }
 nav ul a {
   color: black;
+  border-radius: 5px;
+}
+nav ul a:hover {
+  background-color: #d88b84;
+  opacity: 80%;
 }
 h1 {
   text-align: center;
@@ -41,16 +46,19 @@ h1 {
   align-content: center;
   justify-content: center;
 }
-#firstName,
-#lastName,
-#age {
-  width: 100%;
+input[type="text"]:not(.browser-default) {
+  border-bottom: 1px solid #cbdd73;
 }
+input {
+  font-family: "Coustard", serif;
+}
+
 .checkboxContainer {
   background-color: white;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 5px;
 }
 .checkBox {
   display: flex;
@@ -66,11 +74,18 @@ h1 {
   border: none;
   border-radius: 5px;
 }
-#response {
+.response {
+  padding: 10px 0 20px 30px;
+  margin-top:50px ;
   border: 2px;
-  background-color: black;
+  background-color: white;
+  border-radius: 5px;
 }
 [type="checkbox"].filled-in:checked + span:not(.lever):after {
   top: 0;
   background-color: #cbdd73;
+}
+#recordU {
+  color:#cbdd73;
+  text-align: left;
 }
