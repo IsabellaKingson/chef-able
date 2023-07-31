@@ -73,3 +73,70 @@ saveBtn.forEach((el) => {
     saveMeals(el);
   });
 });
+// Adds date pickers with respective options
+document.addEventListener("DOMContentLoaded", function () {
+  const weekStart = document.getElementById("datepicker1");
+  M.Datepicker.init(weekStart, { autoClose: true, format: "yyyy-mm-dd" });
+  const weekEnd = document.getElementById("datepicker2");
+  M.Datepicker.init(weekEnd, {
+    autoClose: true,
+    format: "yyyy-mm-dd",
+    onClose: getHolidays,
+  });
+});
+// Function to get the holidays within the selected week and alert the user
+const getHolidays = function () {
+  countryListUrl = "https://date.nager.at/api/v3/AvailableCountries";
+  myCountry = "Germany";
+  let myCountryCode = "";
+  fetch(countryListUrl)
+    .then((response) => {
+      return response.json();
+    })
+    .then((countryData) => {
+      for (country in countryData) {
+        if (myCountry === countryData[country].name) {
+          myCountryCode = countryData[country].countryCode;
+        }
+      }
+      const startDate = document.getElementById("datepicker1").value;
+      const endDate = document.getElementById("datepicker2").value;
+      let year = startDate.slice(0, 4);
+      let holidayDataUrl =
+        "https://date.nager.at/api/v3/PublicHolidays/" +
+        year +
+        "/" +
+        myCountryCode;
+      fetch(holidayDataUrl)
+        .then((response) => {
+          return response.json();
+        })
+        .then((holidayData) => {
+          for (holiday in holidayData) {
+            if (
+              holidayData[holiday].date >= startDate &&
+              holidayData[holiday].date <= endDate
+            ) {
+              const holidayDate = new Date(holidayData[holiday].date);
+              const day = holidayDate.getDay();
+              const dayNames = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+              ];
+              const holidayDayName = dayNames[day];
+              const dates = document.getElementById("dates");
+              const date = document.createElement("p");
+              const dateName = holidayData[holiday].name;
+              date.textContent =
+                dateName + " is this week " + holidayDayName + ".";
+              dates.append(date);
+            }
+          }
+        });
+    });
+};
