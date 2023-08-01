@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <!--Google font Coustard-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,36 +26,23 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body id="page1">
-    <section class="main-navbar">
-      <nav class="nav-fixed">
+    <section class="main-navbar">      
+      <nav class="nav-fixed">    
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Shopping List</a>
+          <a class="brand-logo">Shopping List</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons">menu</i></a
-          >
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#" onclick="toggleModal();">Home</a></li>
-            <li><a href="#" onclick="toggleModal();">Food</a></li>
-            <li><a href="#" onclick="toggleModal();">Allergies</a></li>
-            <li><a href="#" onclick="toggleModal();">About US</a></li>
-            <li><a href="#" onclick="toggleModal();">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#" onclick="toggleModal();">Home</a></li>
-        <li><a href="#" onclick="toggleModal();">Food</a></li>
-        <li><a href="#" onclick="toggleModal();">Allergies</a></li>
-        <li><a href="#" onclick="toggleModal();">About US</a></li>
-        <li><a href="#" onclick="toggleModal();">Contact</a></li>
-      </ul>
+            <i class="material-icons"></i></a>                            
+      </div>
+    </nav> 
     </section>
-    <section class="fslider">
-      <div class="slider">
-        <ul class="slides">
+    <section>
+      <img src="Artboard 3.png" >
+    </section>    
+    <section class="fslider">      
+      <div class="slider">        
+        <ul class="slides">          
           <li>
-            <img src="banner1.png" alt="Oops!" />
+            <img src="banner1.png" alt="Oops!" />           
             <div class="caption center-align white-text">
               <h3>Shopping made Easy</h3>
               <h5 class="light.text-lighten-3">
@@ -77,8 +65,8 @@
     <section class="descrip">
       <div class="section white center">
         <div class="row container center">
-          <div class="col l4 m4 s12">
-            <div style="width: 300px" ">
+         <div class="col l4 m4 s12">
+            <div style="width: 300px" >
               <p id="item-name">ENTER (ITEM - QUANTITY - WEIGHT)</p>
               <br />
               <label>ITEM</label>

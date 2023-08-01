@@ -1,5 +1,17 @@
+body
+{
+  --pinkie-melon: #d88b84;
+  font-family: 'Coustard', serif;
+}
+
 .nav-wrapper {
-  background-color: #289944;
+  background-color: var(--greenie-melon);
+  
+}
+.brand-logo
+{
+  position: absolute;
+  left: 500px;
 }
 
 #shopping-button {
@@ -47,7 +59,7 @@
 #quantity-item
 {
   position: absolute;
-  margin-left: 420px;
+  margin-left: 440px;
 }
 #weight-item
 {
@@ -63,6 +75,7 @@
 {
   background-color: chocolate;
 }
+
 
 
 
