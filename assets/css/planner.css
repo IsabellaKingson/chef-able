@@ -1,0 +1,62 @@
+:root {
+    --pinkie-melon: #d88b84;
+    --greenie-melon: #cbdd73;
+    --whiteness-melon: #ffffff;
+    --blackness-melon: #231520;
+}
+body {
+  background-color: var(--greenie-melon);
+  font-family: 'Coustard', serif;
+}
+nav .nav-wrapper {
+  position: relative;
+  height: 100px;
+  padding-top: 20px;
+}
+.nav-wrapper {
+  background-color: var(--whiteness-melon);
+}
+img {
+  position: absolute;
+  left: 10px;
+  top: -120px;
+  margin: 0 0 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+nav ul a {
+  color: black;
+}
+main {
+  margin-top: 40px;
+}
+h1 {
+  font-size: 50px;
+  position: relative;
+  top: 35px;
+}
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.btn-small {
+    background-color: var(--pinkie-melon);
+}
+.clear-btn, .save-btn {
+  margin: 10px 5px 0;
+}
+#dates {
+  display: block;
+  text-align: center;
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+#dates label {
+  color: var(--blackness-melon)
+}

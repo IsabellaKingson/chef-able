@@ -9,35 +9,40 @@
 </head>
 <body>
     <!-- Nav (we need to change it to our links) -->
-  <!-- <nav>
-    <div class="nav-wrapper">
-     <a><img src="./assets/Logo/Artboard 3.png" class="brand-logo"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="badges.html" class="navLink">Shopping List</a></li>
-        <li><a href="collapsible.html" class="navLink">Recipe</a></li>
-        <li><a href="collapsible.html" class="navLink">Planner</a></li>
-        <li><a href="collapsible.html" class="navLink">AboutU</a></li>
-      </ul>
-    </div>
-  </nav> -->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"></a><img src = "./assets/image/Artboard 3.png">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="badges.html">Shopping</a></li>
+            <li><a href="badges.html">Recipe</a></li>
+            <li><a href="./planner.html">Planner</a></li>
+            <li><a href="./about.html">About U</a></li>
+          </ul>
+        </div>
+      </nav>
 
 <!-- About Forum -->
 <section class= "AboutBox">
+    <h1> About U</h1>
       <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="First Name" id="firstName" type="text" class="validate">
+            <form>
+          <input placeholder="Name" id="firstName" type="text" class="validate">
           <label for="first_name"></label>
+        </form>
         </div>
-        <div class="input-field col s6">
+        <!-- <div class="input-field col s6">
             <input placeholder="Last Name" id="lastName" type="text" class="validate">
             <label for="last_name"></label>
-        </div>
+        </div> -->
         <div class="input-field col s6">
+            <form>
             <input placeholder="Age" id="age" type="text" class="validate">
             <label for="age"></label>
+        </form>
         </div>
         <!-- Dropdown options for Gender -->
         <div class = "genderBox">
@@ -47,161 +52,179 @@
               <option value="2">Male</option>
               <option value="3">Transgender</option>
               <option value="4">Non-binary</option>
-              <option value="4">Prefer not to respond</option>
+              <option value="5">Prefer not to respond</option>
             </select>
         </div>
         </div>
     </div>
       </div>
+      <!-- Dropdown for Country -->
+      <div class = "countryBox">
+        <select class="browser-default" id = "country">
+          <option value=""  selected> Please select your country</option>
+          <option value="1" ></option>
+        </select>
+    </div>
       <br>
-      <h5> Please un-check off your allegries listed down below:</h5>
+      <h6> Please check off your allegries listed down below:</h6>
       <div class="checkboxContainer">
-        <div class = "checkBox">
-            
+        <div class = "checkBox">  
             <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input value = "peanuts" type="checkbox" class="filled-in"  />
                   <span>Peanuts</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "sesame" class="filled-in" />
                   <span>Sesame</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "shellfish" class="filled-in" />
                   <span>Shellfish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = " Tree Nuts" class="filled-in"  />
                   <span>Tree Nuts</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Fish" class="filled-in" />
                   <span>Fish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Milk" class="filled-in" />
                   <span>Milk</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Soy" class="filled-in"  />
                   <span>Soy</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Egg" class="filled-in" />
                   <span>Egg</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Grains" class="filled-in" />
                   <span>Grains</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "citrus" class="filled-in" />
                   <span>Citrus</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "Berries" class="filled-in" />
                   <span>Berries</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "mushroom" class="filled-in" />
                   <span>Mushrooms</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "pepper" class="filled-in" />
                   <span>Bell Pepper</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "cheese" class="filled-in"  />
                   <span>Cheese</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "beef" class="filled-in" />
                   <span>Beef</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "fish" class="filled-in"  />
                   <span>Fish</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "peaches" class="filled-in" />
                   <span>Peaches</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "watermelon" class="filled-in" />
                   <span> Watermelon</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "bean" class="filled-in"  />
                   <span>Green Bean</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "orange" class="filled-in" />
                   <span>Orange</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "chicken" class="filled-in" />
                   <span>Chicken</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "apple" class="filled-in"  />
                   <span>Apple</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" value = "other" class="filled-in" />
                   <span>Others <input value=" " id="other" type="text" class="validate">
                   </span>
                 </label>
               </p>
         </div>
       </div>
-      <button class="btn" type="submit" name="action">Submit
+      <button  id = "submitBtn" class="btn" type="submit" name="action">Submit
         <i class="material-icons right"></i>
       </button>
+      <div class = "response">
+        <h5 id="recordU"> Record of U</h5>
+       <p> Name: <span id="first"></span> </p>
+       <p> Age: <span id="ageNum"></span> </p>
+       <p> Gender: <span id="gen"></span> </p>
+       <p> Country: <span id="con"></span> </p>
+       <p> Allgeries: <span id="allg"></span> </p>
+       <p> Other Allgeries: <span id="otherAllg"></span> </p>
+
+
+
+     </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/about.js"></script>
