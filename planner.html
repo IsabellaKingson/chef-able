@@ -14,16 +14,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="./assets/planner-assets/planner.css" />
+    <link rel="stylesheet" href="./assets/css/planner.css" />
     <title>Meal Planner</title>
   </head>
   <body>
+    <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a><img src = "./assets/image/Artboard 3.png">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Home</a></li>
+          <li><a href="badges.html">Shopping</a></li>
+          <li><a href="badges.html">Recipe</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="about.html">About U</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <main>
-      <h1 class="center-align">Weekly Meal Plan</h1>
+      <div class="row">
+      <h1 class="center-align col s6">Meal Planner</h1>
+      <div class="col s6" id="dates">
+        <p>Please select your desired week</p>
+        <label for="datepicker">Select the Sunday: </label><input type="text" class="datepicker" id="datepicker1">
+        <label for="datepicker">Select the Saturday: </label><input type="text" class="datepicker" id="datepicker2">
+      </div></div>
       <div class="container row">
         <div class="card">
           <form class="card-content" id="breakfast">
             <h4 class="center-align">Breakfast</h4>
+            <div class="section" id="b-sun">
+              <h6>Sunday</h6>
+              <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                <i class="material-icons">add</i>
+              </a>
+            </div>
+            <div class="divider"></div>
             <div class="section" id="b-mon">
               <h6>Monday</h6>
               <a class="btn-floating btn-small waves-effect waves-light add-btn">
@@ -65,13 +92,6 @@
                 <i class="material-icons">add</i>
               </a>
             </div>
-            <div class="divider" id="b-sun"></div>
-            <div class="section">
-              <h6>Sunday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
             <div class="divider"></div>
             <div class="container row">
               <button
@@ -95,6 +115,13 @@
         <div class="card">
          <form class="card-content" id="lunch">
            <h4 class="center-align">Lunch</h4>
+           <div class="section" id="l-sun">
+                 <h6>Sunday</h6>
+                 <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                   <i class="material-icons">add</i>
+                 </a>
+           </div>
+           <div class="divider"></div>
               <div class="section" id="l-mon">
                  <h6>Monday</h6>
                 <a class="btn-floating btn-small waves-effect waves-light add-btn">
@@ -137,13 +164,6 @@
                   </a>
                 </div>
                 <div class="divider"></div>
-            <div class="section" id="l-sun">
-                  <h6>Sunday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-            </div>
-            <div class="divider"></div>
             <div class="container row">
                   <button
                     class="btn-small waves-effect waves-light clear-btn"
@@ -165,6 +185,13 @@
         <div class="card">
             <form class="card-content" id="dinner">
                 <h4 class="center-align">Dinner</h4>
+                <div class="section" id="d-sun">
+                  <h6>Sunday</h6>
+                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                    <i class="material-icons">add</i>
+                  </a>
+                </div>
+                <div class="divider"></div>
                 <div class="section" id="d-mon">
                   <h6>Monday</h6>
                   <a class="btn-floating btn-small waves-effect waves-light add-btn">
@@ -207,13 +234,6 @@
                   </a>
                 </div>
                 <div class="divider"></div>
-                <div class="section" id="d-sun">
-                  <h6>Sunday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
                 <div class="container row">
                   <button
                     class="btn-small waves-effect waves-light clear-btn"
@@ -234,6 +254,6 @@
       </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/planner-assets/planner.js"></script>
+    <script src="./assets/js/planner.js"></script>
   </body>
 </html>
