@@ -21,15 +21,8 @@ let clearBtn = document.querySelectorAll(".clear-btn");
 const clearForm = function (EventTarget) {
   // Gets the parent form element's id and removes the input elements that were added
   // Since the button type is 'reset', the text content is automatically removed
-  let parentCard = EventTarget.parentElement.parentElement;
-  let parentID = parentCard.getAttribute("id");
-  let parentForm = document.getElementById(parentID);
-  let inputs = parentForm.getElementsByTagName("input");
-  console.log(inputs);
-  for (let i = 0; i < inputs.length; i++){
-    inputs[i].remove();
-  };
   localStorage.removeItem("savedMeals");
+  location.reload();
 };
 // Adding event listener for each clear button
 clearBtn.forEach((el) => {
