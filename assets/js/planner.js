@@ -21,13 +21,8 @@ let clearBtn = document.querySelectorAll(".clear-btn");
 const clearForm = function (EventTarget) {
   // Gets the parent form element's id and removes the input elements that were added
   // Since the button type is 'reset', the text content is automatically removed
-  let parentCard = EventTarget.parentElement.parentElement;
-  let parentID = parentCard.getAttribute("id");
-  let parentForm = document.getElementById(parentID);
-  let inputs = parentForm.getElementsByTagName("input");
-  for (const input of inputs) {
-    input.remove();
-  }
+  localStorage.removeItem("savedMeals");
+  location.reload();
 };
 // Adding event listener for each clear button
 clearBtn.forEach((el) => {
@@ -43,12 +38,15 @@ const saveMeals = function (EventTarget) {
   let parentID = parentCard.getAttribute("id");
   let parentForm = document.getElementById(parentID);
   let inputs = parentForm.getElementsByTagName("input");
-  let savedMeals = Object.create({});
+  let savedMeals = [];
   for (const input of inputs) {
+    let thisMeal = Object.create({});
     let inputParent = input.parentElement;
     let inputID = inputParent.getAttribute("id");
     let inputMeal = input.value;
-    savedMeals[inputID] = inputMeal;
+    thisMeal["id"] = inputID;
+    thisMeal["name"] = inputMeal;
+    savedMeals.push(thisMeal);
   }
   console.log(savedMeals);
   localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
@@ -73,21 +71,61 @@ saveBtn.forEach((el) => {
     saveMeals(el);
   });
 });
-// Adds date pickers with respective options
 document.addEventListener("DOMContentLoaded", function () {
+  // Adds date pickers with respective options
   const weekStart = document.getElementById("datepicker1");
-  M.Datepicker.init(weekStart, { autoClose: true, format: "yyyy-mm-dd" });
+  M.Datepicker.init(weekStart, {
+    autoClose: true,
+    format: "yyyy-mm-dd",
+    disableDayFn: function (date) {
+      if (date.getDay() == 0) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+  });
   const weekEnd = document.getElementById("datepicker2");
   M.Datepicker.init(weekEnd, {
     autoClose: true,
     format: "yyyy-mm-dd",
+    disableDayFn: function (date) {
+      if (date.getDay() == 6) {
+        return false;
+      } else {
+        return true;
+      }
+    },
     onClose: getHolidays,
   });
+  // Checking for saved meals and adding them to the page
+  let storageMeals = JSON.parse(localStorage.getItem("savedMeals"));
+  if (storageMeals) {
+    for (meal in storageMeals) {
+      let mealID = storageMeals[meal].id;
+      let mealName = storageMeals[meal].name;
+      let mealParent = document.getElementById(mealID);
+      let refreshInput = document.createElement("input");
+      refreshInput.value = mealName;
+      mealParent.append(refreshInput);
+    }
+  }
 });
+// Initializes error modal to prevent the function from failing
+let errorModal = document.querySelector(".modal");
+let instance = M.Modal.init(errorModal, {});
 // Function to get the holidays within the selected week and alert the user
 const getHolidays = function () {
+  // Getting the user info from the About U page saved in local storage
+  let userInputData = JSON.parse(localStorage.getItem("saveInputData"));
+  // Alerting the user if they haven't input information on the About U page
+  if (!userInputData) {
+    instance.open();
+    return;
+  }
+  // Getting the user's country id
   countryListUrl = "https://date.nager.at/api/v3/AvailableCountries";
-  myCountry = "Germany";
+  let myCountry = userInputData[0].countryData;
   let myCountryCode = "";
   fetch(countryListUrl)
     .then((response) => {
@@ -99,6 +137,7 @@ const getHolidays = function () {
           myCountryCode = countryData[country].countryCode;
         }
       }
+      // Get the user selected week and check for public holidays within those dates
       const startDate = document.getElementById("datepicker1").value;
       const endDate = document.getElementById("datepicker2").value;
       let year = startDate.slice(0, 4);
@@ -128,6 +167,7 @@ const getHolidays = function () {
                 "Friday",
                 "Saturday",
               ];
+              // Allow the user to see which holidays are in their selected week and which day they are
               const holidayDayName = dayNames[day];
               const dates = document.getElementById("dates");
               const date = document.createElement("p");

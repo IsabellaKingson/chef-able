@@ -37,9 +37,19 @@
       <h1 class="center-align col s6">Meal Planner</h1>
       <div class="col s6" id="dates">
         <p>Please select your desired week</p>
-        <label for="datepicker">Select the Sunday: </label><input type="text" class="datepicker" id="datepicker1">
-        <label for="datepicker">Select the Saturday: </label><input type="text" class="datepicker" id="datepicker2">
-      </div></div>
+        <label for="datepicker">Select the start date: </label><input type="text" class="datepicker" id="datepicker1">
+        <label for="datepicker">Select the end date: </label><input type="text" class="datepicker" id="datepicker2">
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Error</h4>
+            <p>Please enter your country information in the <a href="about.html">About U</a> section to use this feature.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+          </div>
+        </div>
+      </div>
+      </div>
       <div class="container row">
         <div class="card">
           <form class="card-content" id="breakfast">
@@ -99,7 +109,7 @@
                 type="reset"
                 name="clear-b"
               >
-                Clear
+                Clear All
               </button>
               <button
               class="btn-small waves-effect waves-light save-btn"
@@ -170,7 +180,7 @@
                     type="reset"
                     name="clear-l"
                   >
-                    Clear
+                    Clear All
                   </button>
                   <button
                   class="btn-small waves-effect waves-light save-btn"
@@ -240,7 +250,7 @@
                     type="reset"
                     name="clear-d"
                   >
-                    Clear
+                    Clear All
                   </button>
                   <button
                   class="btn-small waves-effect waves-light save-btn"
