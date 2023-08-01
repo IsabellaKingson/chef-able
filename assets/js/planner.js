@@ -43,12 +43,15 @@ const saveMeals = function (EventTarget) {
   let parentID = parentCard.getAttribute("id");
   let parentForm = document.getElementById(parentID);
   let inputs = parentForm.getElementsByTagName("input");
-  let savedMeals = Object.create({});
+  let savedMeals = [];
   for (const input of inputs) {
+    let thisMeal = [Object.create({})];
     let inputParent = input.parentElement;
     let inputID = inputParent.getAttribute("id");
     let inputMeal = input.value;
-    savedMeals[inputID] = inputMeal;
+    thisMeal['id'] = inputID;
+    thisMeal['meal'] = inputMeal;
+    savedMeals.push(thisMeal);
   }
   console.log(savedMeals);
   localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
