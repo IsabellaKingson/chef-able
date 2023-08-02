@@ -22,7 +22,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <!--CSS link-->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="shopping.css" />
   </head>
   <body id="page2">
     <section class="main-navbar">
@@ -33,7 +33,7 @@
             <i class="material-icons"></i></a
           >
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html" >Main Shopping Page</a></li>
+            <li><a href="shopping.html" >Main Shopping Page</a></li>
             <li><a href="#" onclick="toggleModal();"></a></li>
             <li><a href="#" onclick="toggleModal();"></a></li>
             <li><a href="#" onclick="toggleModal();"></a></li>
@@ -75,6 +75,34 @@
       </div>
   </div>
   </section>
+  <section>
+    <div class="section white center">
+        <div class="row container center">
+            <div class="col l6 m6 s12">
+                <div style="width: 400px"> 
+                    CALORIE COUNTER
+                    <div>
+                      <input id="input-text" placeholder="tomatoes...">                      
+                      <label for="item">Enter Item Here</label>                      
+                      <input id="input-quantity" value="1">
+                      <label for="item-quantity">Quantity</label>
+                      <div>
+                        <div class="calorie-display"></div> 
+                        <a id="calorie-button" class="waves-effect waves-light btn" onclick="calorieCount()">Calories</a> 
+                                           
+                      </div>
+                    </div>                    
+                </div>                    
+            </div>               
+        </div>
+    </div>
+    </section>
+    <section id="displayCalories">      
+      <span id="descriptionQuantity">Item Quantity = </span><span id="itemQuantity"></span><span id="descriptionCalorie">Calories = </span><span id="display-calorie"></span>
+      <a id="clear-button" class="waves-effect waves-light btn" onclick="clearTable()">CLEAR</a> 
+      
+    </section>
+ 
   <section class="infoModal">
         <div id="modal3" class="modal">
           <div class="modal-content">
@@ -86,6 +114,9 @@
           </div>
         </div>
       </section>
+      <footer>
+        <span> Allergic, the Text is highlighted in </span><span style="color: red;">red* </span>
+      </footer>
     </body>
     <!--Jquery-->
     <script

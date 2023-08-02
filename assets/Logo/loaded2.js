@@ -48,5 +48,37 @@ function displayShoppingList()
   
 }
 
+function calorieCount()
+{
+    let food_item = document.getElementById("input-text").value;
+    let item_quantity = document.getElementById("input-quantity").value;
+
+    let query = food_item;
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/nutrition?query=' + query,
+    headers: { 'X-Api-Key': 'skcHYEi7icyuCh5wj//zJg==hljSgIbyDIIh5Qbl'},
+    contentType: 'application/json',
+    success: function(result) {
+        
+        document.getElementById("itemQuantity").innerHTML = item_quantity;
+
+        
+        document.getElementById("display-calorie").innerHTML = item_quantity * (result[0].calories);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+
+}
+function clearTable()
+{
+    document.getElementById("input-text").value = "";
+    document.getElementById("input-quantity").value = "";
+    document.getElementById("itemQuantity").innerHTML = "";
+    document.getElementById("display-calorie").innerHTML = "";
+}
+
 
 

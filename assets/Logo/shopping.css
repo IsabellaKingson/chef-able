@@ -75,6 +75,26 @@ body
 {
   background-color: chocolate;
 }
+#displayCalories
+{
+  display: flex;
+  border: solid transparent;
+  padding-left: 50px;
+  align-items: center;
+  
+}
+#itemQuantity, #display-calorie
+{
+  padding-left: 50px;
+}
+#clear-button
+{
+  margin-left: 200px;
+}
+ #descriptionCalorie
+{
+  padding-left: 50px;
+}
 
 
 
