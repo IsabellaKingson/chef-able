@@ -1,13 +1,16 @@
+/* Brand colors as custom css variables */
 :root {
-    --pinkie-melon: #d88b84;
-    --greenie-melon: #cbdd73;
-    --whiteness-melon: #ffffff;
-    --blackness-melon: #231520;
+  --pinkie-melon: #d88b84;
+  --greenie-melon: #cbdd73;
+  --whiteness-melon: #ffffff;
+  --blackness-melon: #231520;
 }
+/* Page color and font family */
 body {
   background-color: var(--greenie-melon);
-  font-family: 'Coustard', serif;
+  font-family: "Coustard", serif;
 }
+/* Same navigation bar as all other pages */
 nav .nav-wrapper {
   position: relative;
   height: 100px;
@@ -16,47 +19,48 @@ nav .nav-wrapper {
 .nav-wrapper {
   background-color: var(--whiteness-melon);
 }
-img {
-  position: absolute;
-  left: 10px;
-  top: -120px;
-  margin: 0 0 20px;
-  text-align: center;
-  padding-top: 20px;
-}
 nav ul a {
-  color: black;
+  color: var(--blackness-melon);
 }
+/* Lowers the main page content so it is visible below the nav bar */
 main {
   margin-top: 40px;
 }
+/* Defines the spacing between the page title and dates card */
+.page-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 h1 {
   font-size: 50px;
-  position: relative;
-  top: 35px;
+  color: var(--blackness-melon);
+}
+#dates {
+  display: block;
+  text-align: center;
+  max-width: 30%;
+  background-color: var(--whiteness-melon);
+  border-radius: 10px;
+  padding: 10px;
+}
+#dates label {
+  color: var(--blackness-melon);
 }
 .container {
   width: 90%;
   display: flex;
   justify-content: center;
 }
-.card {
-    width: 30%;
-    margin: 10px;
-    border-radius: 10px;
+.meal-section {
+  width: 30%;
+  margin: 10px;
+  border-radius: 10px;
 }
 .btn-small {
-    background-color: var(--pinkie-melon);
+  background-color: var(--pinkie-melon);
 }
-.clear-btn, .save-btn {
-  margin: 10px 5px 0;
-}
-#dates {
-  display: block;
-  text-align: center;
-  max-width: 30%;
-  margin-bottom: 20px;
-}
-#dates label {
-  color: var(--blackness-melon)
+.clear-btn,
+.save-btn {
+  margin: 10px 5px 15px;
 }

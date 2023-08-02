@@ -15,30 +15,31 @@ addBtn.forEach((el) => {
     eventHandler(el);
   });
 });
-// Query Selector for all of the buttons with the clear-btn class
+// Query Selector for the clear-btn class
 let clearBtn = document.querySelectorAll(".clear-btn");
-// Event Handler for the clear buttons
+// Event Handler for the clear button
 const clearForm = function (EventTarget) {
-  // Gets the parent form element's id and removes the input elements that were added
-  // Since the button type is 'reset', the text content is automatically removed
+  // Removes the old data from storage
   localStorage.removeItem("savedMeals");
+  localStorage.removeItem("Week's Meals");
+  // Since the button type is 'reset', the text content is automatically removed, and when we reload, the inputs reset
   location.reload();
 };
-// Adding event listener for each clear button
+// Adding event listener for the clear button
 clearBtn.forEach((el) => {
   el.addEventListener("click", () => {
     clearForm(el);
   });
 });
-// Query Selector to target all the save buttons
+// Query Selector to target the save button
 let saveBtn = document.querySelectorAll(".save-btn");
 // Function to save meals in local storage to persist upon reload
 const saveMeals = function (EventTarget) {
-  let parentCard = EventTarget.parentElement.parentElement;
-  let parentID = parentCard.getAttribute("id");
-  let parentForm = document.getElementById(parentID);
+  // Targeting the form to get every input that was added and saving in an array
+  let parentForm = EventTarget.parentElement.parentElement;
   let inputs = parentForm.getElementsByTagName("input");
   let savedMeals = [];
+  // Creates an object for each input with the input parent's id and the text content and pushes the objest to the array
   for (const input of inputs) {
     let thisMeal = Object.create({});
     let inputParent = input.parentElement;
@@ -48,23 +49,24 @@ const saveMeals = function (EventTarget) {
     thisMeal["name"] = inputMeal;
     savedMeals.push(thisMeal);
   }
-  console.log(savedMeals);
+  // Then saves the array with all the objects in local storage
   localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
 };
 // Function to store meals in local storage to reference when adding to your shopping list
 const storeMeals = function (EventTarget) {
-  let parentCard = EventTarget.parentElement.parentElement;
-  let parentID = parentCard.getAttribute("id");
-  let parentForm = document.getElementById(parentID);
+  // Gets all the form inputs and initializes an empty array
+  let parentForm = EventTarget.parentElement.parentElement;
   let inputs = parentForm.getElementsByTagName("input");
   let meals = [];
+  // Saves the input values and adds to the array
   for (const input of inputs) {
     let inputVal = input.value;
     meals.push(inputVal);
   }
+  // Saves the array in local storage
   localStorage.setItem("Week's Meals", JSON.stringify(meals));
 };
-// Event Listener for each save button
+// Event Listener for the save button
 saveBtn.forEach((el) => {
   el.addEventListener("click", () => {
     storeMeals(el);
@@ -111,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-// Initializes error modal to prevent the function from failing
+// Initializes error modal to prevent the getHolidays function from failing
 let errorModal = document.querySelector(".modal");
 let instance = M.Modal.init(errorModal, {});
 // Function to get the holidays within the selected week and alert the user
@@ -152,6 +154,7 @@ const getHolidays = function () {
         })
         .then((holidayData) => {
           for (holiday in holidayData) {
+            // If there is a holiday within the selected dates, return the day of the week value and the name of the holiday
             if (
               holidayData[holiday].date >= startDate &&
               holidayData[holiday].date <= endDate
