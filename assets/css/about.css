@@ -15,14 +15,6 @@ nav .nav-wrapper {
 .nav-wrapper {
   background-color: white;
 }
-img {
-  position: absolute;
-  left: 10px;
-  top: -120px;
-  margin: 0 0 20px;
-  text-align: center;
-  padding-top: 20px;
-}
 nav ul a {
   color: black;
   border-radius: 5px;
