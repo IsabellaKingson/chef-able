@@ -1,6 +1,47 @@
 :root {
-    --pinkie-melon: #d88b84;
-    --greenie-melon: #cbdd73;
-    --whiteness-melon: #ffffff;
-    --blackness-melon: #231520;
+  --pinkie-melon: #d88b84;
+  --greenie-melon: #cbdd73;
+  --whiteness-melon: #ffffff;
+  --blackness-melon: #231520;
+}
+body {
+  background-color: var(--pinkie-melon);
+  font-family: "Coustard", serif;
+}
+nav .nav-wrapper {
+  position: relative;
+  height: 100px;
+  padding-top: 20px;
+}
+.nav-wrapper {
+  background-color: var(--whiteness-melon);
+}
+nav img {
+  position: absolute;
+  left: 10px;
+  top: -120px;
+  margin: 0 0 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+nav ul a {
+  color: black;
+}
+main {
+  position: relative;
+  top: 40px;
+}
+.fortune-cookie {
+  display: flex;
+  justify-content: center;
+}
+.fortune-cookie img {
+  max-width: 80px;
+}
+.fortune-button {
+  background: none;
+  border: none;
+  max-width: fit-content;
+  margin-right: 10px;
+  cursor: pointer;
 }
