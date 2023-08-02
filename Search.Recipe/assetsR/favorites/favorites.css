@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap");
+
+@font-face {
+  font-family: "Coustard";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/coustard/v16/3XFpErgg3YsZ5fqUU-UIt2Q.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+body,html{
+  width: 70%;
+  margin: 0, auto;
+  font-family: "coustard";
+  background: #cbdd73;
+
+}
+
+
+.logo{
+  font-size: 30px;
+  font-family: "coustard";
+  color: #d88b84;
+  display: flex;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 100px;
+  margin: 0;
+  background: #ffff;
+  font-family: "coustard";
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  align-items: center;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.navbar a{
+  position: relative;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 60px;
+  color: #d88b84;
+  align-items: center;
+}
+
+h1{
+  margin-top: 70px;
+}
+
+
+.container{
+  width: 360px;
+}
+
+#inputField{
+  width: 400px;
+  height: 50px;
+  border: 1px solid #d88b84;
+  outline: black;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "coustard";
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+#addMeals{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d88b84;
+  font-size: 20px;
+  vertical-align: middle;
+  font-size: 30px;
+  display: flex;
+}
+
+.favorite-meals{
+  margin-top: 25px;
+}
+
+.paragraph-styling{
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+h1{
+  font-family: "coustard" ;
+  font-weight: 600;
+  color: #d88b84;
+   
+
+}
