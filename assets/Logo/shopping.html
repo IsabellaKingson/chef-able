@@ -23,7 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <!--CSS link-->
-    <link rel="stylesheet" href="./assets/css/shopping.css" />
+    <link rel="stylesheet" href="shopping.css" />
   </head>
   <body id="page1">
     <section class="main-navbar">      
@@ -31,8 +31,15 @@
         <div class="nav-wrapper">
           <a class="brand-logo">Shopping List</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons"></i></a>                            
-      </div>
+            <i class="material-icons"></i></a>
+        </div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="shopping.html" >Main Shopping Page</a></li>
+          <li><a href="index.html" onclick="toggleModal();"></a></li>
+          <li><a href="badges.html" onclick="toggleModal();"></a></li>
+          <li><a href="planner.html" onclick="toggleModal();"></a></li>
+          <li><a href="about.html" onclick="toggleModal();"></a></li>
+        </ul>
     </nav> 
     </section>
     <section>
