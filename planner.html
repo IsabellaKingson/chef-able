@@ -9,259 +9,282 @@
       href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="./assets/css/planner.css" />
-    <title>Meal Planner</title>
+    <title>Chef-able - Planner</title>
   </head>
   <body>
     <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo"></a><img src = "./assets/image/Artboard 3.png">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Home</a></li>
-          <li><a href="badges.html">Shopping</a></li>
-          <li><a href="badges.html">Recipe</a></li>
-          <li><a href="planner.html">Planner</a></li>
-          <li><a href="about.html">About U</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"></a>
+          <img src="./assets/Logo/Artboard 3.png" />
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="about.html">About U</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
-      <div class="row">
-      <h1 class="center-align col s6">Meal Planner</h1>
-      <div class="col s6" id="dates">
-        <p>Please select your desired week</p>
-        <label for="datepicker">Select the start date: </label><input type="text" class="datepicker" id="datepicker1">
-        <label for="datepicker">Select the end date: </label><input type="text" class="datepicker" id="datepicker2">
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Error</h4>
-            <p>Please enter your country information in the <a href="about.html">About U</a> section to use this feature.</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="container row">
-        <div class="card">
-          <form class="card-content" id="breakfast">
-            <h4 class="center-align">Breakfast</h4>
-            <div class="section" id="b-sun">
-              <h6>Sunday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
+      <div class="page-header">
+        <h1>Meal Planner</h1>
+        <div class="card" id="dates">
+          <p>Please select your desired week</p>
+          <label for="datepicker">Select the start date: </label
+          ><input type="text" class="datepicker" id="datepicker1" />
+          <label for="datepicker">Select the end date: </label
+          ><input type="text" class="datepicker" id="datepicker2" />
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Error</h4>
+              <p>
+                Please enter your country information in the
+                <a href="about.html">About U</a> section to use this feature.
+              </p>
             </div>
-            <div class="divider"></div>
-            <div class="section" id="b-mon">
-              <h6>Monday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section" id="b-tues">
-              <h6>Tuesday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section" id="b-wed">
-              <h6>Wednesday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section" id="b-thurs">
-              <h6>Thursday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section" id="b-fri">
-              <h6>Friday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section" id="b-sat">
-              <h6>Saturday</h6>
-              <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                <i class="material-icons">add</i>
-              </a>
-            </div>
-            <div class="divider"></div>
-            <div class="container row">
-              <button
-                class="btn-small waves-effect waves-light clear-btn"
-                type="reset"
-                name="clear-b"
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+                >OK</a
               >
-                Clear All
-              </button>
-              <button
-              class="btn-small waves-effect waves-light save-btn"
-              type="button"
-              name="save-b"
-            >
-              Save
-            </button>
             </div>
-          </form>
+          </div>
         </div>
-
-        <div class="card">
-         <form class="card-content" id="lunch">
-           <h4 class="center-align">Lunch</h4>
-           <div class="section" id="l-sun">
-                 <h6>Sunday</h6>
-                 <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                   <i class="material-icons">add</i>
-                 </a>
-           </div>
-           <div class="divider"></div>
+      </div>
+      <form>
+        <div class="container">
+          <div class="card meal-section">
+            <div class="card-content" id="breakfast">
+              <h4 class="center-align">Breakfast</h4>
+              <div class="section" id="b-sun">
+                <h6>Sunday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-mon">
+                <h6>Monday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-tues">
+                <h6>Tuesday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-wed">
+                <h6>Wednesday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-thurs">
+                <h6>Thursday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-fri">
+                <h6>Friday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="b-sat">
+                <h6>Saturday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+            </div>
+          </div>
+          <div class="card meal-section">
+            <div class="card-content" id="lunch">
+              <h4 class="center-align">Lunch</h4>
+              <div class="section" id="l-sun">
+                <h6>Sunday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
               <div class="section" id="l-mon">
-                 <h6>Monday</h6>
-                <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                <h6>Monday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
                   <i class="material-icons">add</i>
                 </a>
               </div>
               <div class="divider"></div>
               <div class="section" id="l-tues">
                 <h6>Tuesday</h6>
-                <a class="btn-floating btn-small waves-effect waves-light add-btn">
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
                   <i class="material-icons">add</i>
                 </a>
-            </div>
+              </div>
               <div class="divider"></div>
               <div class="section" id="l-wed">
-                  <h6>Wednesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-              </div>
-                <div class="divider"></div>
-                <div class="section" id="l-thurs">
-                  <h6>Thursday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="l-fri">
-                  <h6>Friday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="l-sat">
-                  <h6>Saturday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-            <div class="container row">
-                  <button
-                    class="btn-small waves-effect waves-light clear-btn"
-                    type="reset"
-                    name="clear-l"
-                  >
-                    Clear All
-                  </button>
-                  <button
-                  class="btn-small waves-effect waves-light save-btn"
-                  type="button"
-                  name="save-l"
+                <h6>Wednesday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
                 >
-                  Save
-                </button>
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="l-thurs">
+                <h6>Thursday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="l-fri">
+                <h6>Friday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="l-sat">
+                <h6>Saturday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
             </div>
-          </form>
-        </div>
-        <div class="card">
-            <form class="card-content" id="dinner">
-                <h4 class="center-align">Dinner</h4>
-                <div class="section" id="d-sun">
-                  <h6>Sunday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="d-mon">
-                  <h6>Monday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="d-tues">
-                  <h6>Tuesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-              </div>
-                <div class="divider"></div>
-                <div class="section" id="d-wed">
-                  <h6>Wednesday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="d-thurs">
-                  <h6>Thursday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="d-fri">
-                  <h6>Friday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="section" id="d-sat">
-                  <h6>Saturday</h6>
-                  <a class="btn-floating btn-small waves-effect waves-light add-btn">
-                    <i class="material-icons">add</i>
-                  </a>
-                </div>
-                <div class="divider"></div>
-                <div class="container row">
-                  <button
-                    class="btn-small waves-effect waves-light clear-btn"
-                    type="reset"
-                    name="clear-d"
-                  >
-                    Clear All
-                  </button>
-                  <button
-                  class="btn-small waves-effect waves-light save-btn"
-                  type="button"
-                  name="save-d"
+          </div>
+          <div class="card meal-section">
+            <div class="card-content" id="dinner">
+              <h4 class="center-align">Dinner</h4>
+              <div class="section" id="d-sun">
+                <h6>Sunday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
                 >
-                  Save
-                </button>
-                </div>
-        </form>
-      </div>
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-mon">
+                <h6>Monday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-tues">
+                <h6>Tuesday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-wed">
+                <h6>Wednesday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-thurs">
+                <h6>Thursday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-fri">
+                <h6>Friday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+              <div class="section" id="d-sat">
+                <h6>Saturday</h6>
+                <a
+                  class="btn-floating btn-small waves-effect waves-light add-btn"
+                >
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+              <div class="divider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container buttons">
+          <button
+            class="btn-small waves-effect waves-light clear-btn"
+            type="reset"
+            name="clear"
+          >
+            Clear
+          </button>
+          <button
+            class="btn-small waves-effect waves-light save-btn"
+            type="button"
+            name="save"
+          >
+            Save
+          </button>
+        </div>
+      </form>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/planner.js"></script>
